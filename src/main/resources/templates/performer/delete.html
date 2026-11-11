@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout/layout}">
+<head>
+    <title>削除確認</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <main class="page">
+        <div class="card-box" th:object="${performer}">
+            <h2 class="h5 mb-3">この参加者を削除しますか？</h2>
+            <p>氏名：<strong th:text="*{name}"></strong></p>
+            <p>演目：<span th:text="*{title}"></span></p>
+            <form th:action="@{/performer/delete}" method="post" class="d-inline">
+                <input type="hidden" name="id" th:value="*{id}">
+                <button type="submit" class="btn btn-danger">はい、削除する</button>
+            </form>
+            <a th:href="@{/performer/list}" class="btn btn-outline-secondary">いいえ</a>
+        </div>
+    </main>
+</div>
+</body>
+</html>

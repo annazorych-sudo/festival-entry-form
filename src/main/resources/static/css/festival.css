@@ -1,0 +1,121 @@
+.top-hero {
+    min-height: 100vh;
+    margin: 0;
+    background-image:
+        linear-gradient(rgba(255, 248, 235, 0.72), rgba(255, 244, 225, 0.78)),
+        url("/images/festival.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-inner {
+    text-align: center;
+    padding: 2rem 1.2rem;
+    max-width: 920px;
+}
+
+.hero-title {
+    font-weight: 800;
+    font-size: clamp(2.1rem, 5vw, 3.6rem);
+    color: #6b1020;
+    text-shadow: 0 2px 0 #fff, 0 8px 24px rgba(255,255,255,0.7);
+    letter-spacing: 0.06em;
+}
+
+.hero-sub {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #3b2a1a;
+    margin: 0.8rem 0 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-hero-primary,
+.btn-hero-secondary {
+    font-weight: 800;
+    font-size: 1.15rem;
+    padding: 0.95rem 1.6rem;
+    border-radius: 14px;
+    border: 3px solid #fff;
+    box-shadow: 0 8px 18px rgba(80, 20, 20, 0.35);
+}
+
+.btn-hero-primary {
+    color: #fff;
+    background: #e23b2f;
+}
+
+.btn-hero-primary:hover {
+    color: #fff;
+    background: #c01f16;
+}
+
+.btn-hero-secondary {
+    color: #fff;
+    background: #1e63d8;
+}
+
+.btn-hero-secondary:hover {
+    color: #fff;
+    background: #1549a6;
+}
+
+.app-body {
+    background: #fff7ee;
+    min-height: 100vh;
+}
+
+.app-nav {
+    background: #7a1f2e;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-nav a {
+    color: #fff;
+    font-weight: 700;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+.app-nav .brand {
+    margin-left: 0;
+    font-size: 1.15rem;
+}
+
+.page {
+    padding: 1.5rem;
+}
+
+.card-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.4rem;
+    box-shadow: 0 8px 24px rgba(122, 31, 46, 0.08);
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.btn-navy {
+    color: #fff;
+    background: #7a1f2e;
+    border-color: #7a1f2e;
+    font-weight: 700;
+}
+
+.btn-navy:hover {
+    color: #fff;
+    background: #5c1521;
+}

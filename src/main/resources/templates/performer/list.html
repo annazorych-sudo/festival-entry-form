@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout/layout}">
+<head>
+    <title>参加者一覧</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <main class="page">
+        <div class="card-box">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h5 mb-0">参加者一覧</h2>
+                <a th:href="@{/performer/add}" class="btn btn-navy btn-sm">新しい参加者を登録</a>
+            </div>
+            <div th:if="${message}" class="alert alert-success" th:text="${message}"></div>
+            <div th:if="${performers.size() == 0}">まだ参加者がいません。</div>
+            <div th:if="${performers.size() > 0}" class="table-responsive">
+                <table class="table table-bordered align-middle">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>氏名</th>
+                            <th>電話番号</th>
+                            <th>演目のテーマ</th>
+                            <th>時間</th>
+                            <th>搬入補助</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="p : ${performers}" th:object="${p}">
+                            <td th:text="*{id}"></td>
+                            <td th:text="*{name}"></td>
+                            <td th:text="*{phone}"></td>
+                            <td th:text="*{title}"></td>
+                            <td><span th:text="*{minutes}"></span>分</td>
+                            <td th:text="*{needHelp} ? 'はい' : 'いいえ'"></td>
+                            <td class="text-nowrap">
+                                <a th:href="@{/performer/edit(id=*{id})}" class="btn btn-navy btn-sm">編集</a>
+                                <a th:href="@{/performer/delete(id=*{id})}" class="btn btn-danger btn-sm">削除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
