@@ -7,6 +7,8 @@
 
 ![Entry form](docs/screenshot_form.png)
 
+![Entry list](docs/screenshot_list.png)
+
 ## Features / 主な機能
 
 - Entry form for performers: name, phone, performance theme, duration, need for help with equipment / 出演者の申込フォーム
